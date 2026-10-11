@@ -1,0 +1,38 @@
+:host {
+  display: contents;
+}
+
+:host(.button-host--ancho-completo) {
+  display: block;
+  width: 100%;
+}
+
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.galeria__miniatura-btn {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: none;
+  cursor: pointer;
+}
+
+.galeria__miniatura-btn--activa {
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 48rem) {
+  .header__toggle {
+    display: flex;
+  }
+}
