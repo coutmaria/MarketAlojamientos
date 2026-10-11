@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { Alojamiento } from '../models';
 import { CotizacionService } from './cotizacion.service';
 
@@ -37,7 +38,7 @@ describe('CotizacionService', () => {
     const resultado = servicio.cotizar(alojamiento, fechaRelativa(1), fechaRelativa(4), 2);
 
     expect(resultado.errores).toEqual([]);
-    expect(resultado.cotizacion).toEqual(jasmine.objectContaining({
+    expect(resultado.cotizacion).toEqual(expect.objectContaining({
       numNoches: 3,
       subtotal: 540000,
       tarifaLimpieza: 45000,

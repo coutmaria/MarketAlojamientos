@@ -7,8 +7,8 @@ import { FooterComponent } from './components/organisms/footer/footer.component'
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class AppComponent {
   title = 'Marketplace de Alojamientos';

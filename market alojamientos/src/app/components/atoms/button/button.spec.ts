@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { ButtonComponent } from './button';
 
 describe('ButtonComponent', () => {
@@ -19,9 +20,9 @@ describe('ButtonComponent', () => {
 
     const button: HTMLButtonElement = fixture.nativeElement.querySelector('button');
 
-    expect(button.classList.contains('boton')).toBeTrue();
-    expect(button.classList.contains('boton--secundario')).toBeTrue();
-    expect(button.classList.contains('boton--ancho-completo')).toBeTrue();
+    expect(button.classList.contains('boton')).toBe(true);
+    expect(button.classList.contains('boton--secundario')).toBe(true);
+    expect(button.classList.contains('boton--ancho-completo')).toBe(true);
   });
 
   it('preserves native button type, disabled state, and accessible label', () => {
@@ -33,7 +34,7 @@ describe('ButtonComponent', () => {
     const button: HTMLButtonElement = fixture.nativeElement.querySelector('button');
 
     expect(button.type).toBe('submit');
-    expect(button.disabled).toBeTrue();
+    expect(button.disabled).toBe(true);
     expect(button.getAttribute('aria-label')).toBe('Enviar reserva');
   });
 });
