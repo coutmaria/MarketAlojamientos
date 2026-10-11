@@ -1,0 +1,16 @@
+<div class="galeria">
+  <img class="galeria__principal" [src]="imagenActiva" [alt]="nombreAlojamiento" />
+
+  <div class="galeria__miniaturas" *ngIf="imagenes.length > 1">
+    <app-button
+      tipo="button"
+      variante="personalizado"
+      [clases]="imagen === imagenActiva ? 'galeria__miniatura-btn galeria__miniatura-btn--activa' : 'galeria__miniatura-btn'"
+      [ariaLabel]="nombreAlojamiento"
+      *ngFor="let imagen of imagenes"
+      (click)="seleccionar(imagen)"
+    >
+      <img class="galeria__miniatura" [src]="imagen" [alt]="nombreAlojamiento" />
+    </app-button>
+  </div>
+</div>
