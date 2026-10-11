@@ -1,0 +1,6 @@
+<div class="mensaje-vacio">
+  <span class="mensaje-vacio__icono" aria-hidden="true">{{ icono }}</span>
+  <p class="mensaje-vacio__titulo">{{ titulo }}</p>
+  <p class="mensaje-vacio__descripcion" *ngIf="descripcion">{{ descripcion }}</p>
+  <ng-content></ng-content>
+</div>
