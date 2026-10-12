@@ -116,11 +116,25 @@ npm test -- --watch=false
 | `/mis-reservas` | Reservas realizadas |
 | `**` (cualquier otra) | Página no encontrada |
 
+## Prototipos
+
+Los prototipos de las pantallas principales están en [`docs/prototipos/prototipos-montana-stays.drawio`](docs/prototipos/prototipos-montana-stays.drawio) y se pueden abrir en [draw.io](https://app.diagrams.net) o con la extensión *Draw.io Integration* de VS Code. El archivo tiene una página por pantalla:
+
+0. Mapa de navegación
+1. Inicio
+2. Listado de alojamientos (con el estado sin resultados)
+3. Detalle, cotización y reserva (con los errores de validación)
+4. Mis reservas (con el estado vacío)
+5. Página no encontrada
+6. Versión móvil
+
 ## Estructura general del proyecto
 
 ```
 MarketAlojamientos/
 ├── README.md
+├── docs/
+│   └── prototipos/                   # Prototipos de las pantallas (draw.io)
 └── market alojamientos/              # Aplicación Angular
     ├── angular.json                  # Configuración de Angular CLI
     ├── package.json                  # Dependencias y scripts
